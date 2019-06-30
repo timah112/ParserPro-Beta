@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+	<head>
+		<title>ParserPro</title>
+		<link rel = "stylesheet" type ="text/css" href="css\css_template.css" />
+		<link rel = "stylesheet" type ="text/css" href="css\converter.css" />	
+		<link rel='icon' href='Favicon_Icon.ico' type='image/x-icon'/ >
+
+		<script>
+		
+			var textAreaChecker = document.getElementsByTagName("textarea");
+			
+			
+			function printAlert(){
+					if (textAreaValue === null){
+						alert("Are you sure you want to leave without completing your work?");
+					}
+			}
+			
+			function clearAll(){
+			var textAreaValue = textAreaChecker.value;
+				//for (var i = 0; i < textAreaValue.length; i++){
+					//if (textAreaValue != ""){
+						console.log(textAreaValue);
+						textAreaValue = null;
+					//}
+				//}
+				
+			}
+		
+		//printAlert();
+		//clearAll();		
+		</script>
+	</head>
+	
+	<body>
+		<div id="container">
+			
+			<div id = "nav">
+				<ul>
+					<li>
+					  <a href="file:///C:/Users/ATirmizi1/Documents/PERSONAL/Parser%20Project/index.htm#">Home</a> 
+					  <a href="file:///C:/Users/ATirmizi1/Documents/PERSONAL/Parser%20Project/parser.htm#">Parser</a> 
+					  <a href="file:///C:/Users/ATirmizi1/Documents/PERSONAL/Parser%20Project/Converter.htm">Converter</a> 
+					  <a href="C:\Users\ATirmizi1\Documents\PERSONAL\Parser Project\DiffCompare.htm">Diff Compare</a>
+					  <a href="C:\Users\ATirmizi1\Documents\PERSONAL\Parser Project\Support.htm">Support</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div id = "info">
+					<p><b>Use the Converter feature to convert numerous types of files. The algorithm takes your file, understands the formatting and then converts
+					 that to your required file type. It checks the accuracy of the new file and then returns it in your required format. </b></p>
+			</div>
+				
+						
+			<div id = "content">
+				
+						
+				
+				<form id = "converterForm">
+					<div class="col-convSelect">
+					  <label for="convert"><b>Convert:</b></label>
+					</div>
+					
+					<div class = "col-selectors">
+					
+						<select id="convFrom" name="Convert From">
+							<option value="XMLtoJSON">XML to JSON</option>
+							<option value="JSONtoXML">JSON to XML</option>
+							<option value="CSVtoXML">CSV to XML</option>
+							<option value="XMLtoCSV">XML to CSV</option>
+							<option value="CSVtoPipe">CSV to Pipe-Delimitted</option>
+						</select>
+					</div>
+					
+									
+					<textarea placeholder="Please copy your data here." rows="20" cols="70"></textarea>
+					
+					<div id = "SelectFile">
+						<label for="selectButton"><b>OR</b></label>
+						<button id ="select" type="button" value="Select File" onClick="">
+						Select File
+						</button>					
+					</div> 
+					<hr>
+					
+					<div class="col-Output">
+					  <label for="Output"><b>Output:</b></label>
+					</div>
+					<br>
+					
+					<textarea placeholder="Your Output will be pasted here.." rows="20"></textarea>
+					
+					<div id = "downloadFile">
+						<button id ="select" type="button" onClick="">
+						Download
+						</button>
+						
+						<button id ="select" type="button" onclick="clearAll()">
+						Clear All
+						</button>
+						
+					</div> 				
+								
+				</form>				
+				
+			</div>
+			
+			<div id = "footer">
+				Copyright &copy; 2018-2019 ParserPro by Atif Tirmizi	
+			</div>
+			
+			
+		</div>
+	
+	</body>
+
+
+</html>

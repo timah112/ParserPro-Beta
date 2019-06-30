@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+	<head>
+		<title>ParserPro</title>
+		<link rel = "stylesheet" type ="text/css" href="css\css_template.css" />	
+		<link rel = "stylesheet" type ="text/css" href="css\support.css" />
+		<link rel='icon' href='Favicon_Icon.ico' type='image/x-icon'/ >
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	</head>
+	
+	<body>
+		<div id="container">
+			
+			<div id = "nav">
+				<ul>
+					<li>
+					  <a href="file:///C:/Users/ATirmizi1/Documents/PERSONAL/Parser%20Project/index.htm#">Home</a> 
+					  <a href="file:///C:/Users/ATirmizi1/Documents/PERSONAL/Parser%20Project/parser.htm#">Parser</a> 
+					  <a href="file:///C:/Users/ATirmizi1/Documents/PERSONAL/Parser%20Project/Converter.htm">Converter</a> 
+					  <a href="C:\Users\ATirmizi1\Documents\PERSONAL\Parser Project\DiffCompare.htm">Diff Compare</a>
+					  <a href="C:\Users\ATirmizi1\Documents\PERSONAL\Parser Project\Support.htm">Support</a>
+					</li>
+				</ul>
+			</div>
+			
+		<div id = "content">
+			<div id="faq">
+				
+				<h2>F.A.Q:</h2>
+				<button class="accordion">Is any of my data being monitored?</button>
+					<div class="panel">
+					  <p>None of your data is being monitored or recorded by us. As said in the disclaimer of the Home Page, all your data is propreitary information only used by you.</p>
+					</div>
+
+					<button class="accordion">What are the new features going to be added to this site? And when will they be added?</button>
+					<div class="panel">
+					  <p> There will be new data analytics features for users to better understand their data. This will be done by our algorithms searching for patterns, 
+						more parsing features, text validators, a downloadable desktop application with many of the site's features, and more. These features should be published in late 2019.</p>
+					</div>
+
+					<button class="accordion">Can I parse any type of XML file, with XSD and other meta-data</button>
+					<div class="panel">
+					  <p>As of yet, our parser is more concerned about XML tags, attributes and values. We want to ensure you retrieve values you are concerned with rather than the meta-data.</p>
+					</div>
+					
+					<button class="accordion">How is this platform free?</button>
+					<div class="panel">
+					  <p>We are able to provide you our services online at no cost because we make our profits from advertisements displayed on our webpages.</p>
+					</div>
+
+			</div>
+			
+			<script>
+				var acc = document.getElementsByClassName("accordion");
+				var i;
+
+				for (i = 0; i < acc.length; i++) {
+				  acc[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if (panel.style.display === "block") {
+					  panel.style.display = "none";
+					} else {
+					  panel.style.display = "block";
+					}
+				  });
+				}
+			</script>
+						
+			<hr>
+			
+			
+			<div id= "About">
+			<h2>About Me:</h2>
+				<p>	    My name is Atif Tirmizi. I'm a Software Engineer with about 3 years of Industry experience. I'm also enrolled in a Master's Program at Lewis University
+				in Computer Science with a concentration in Intelligent Systems. Previously, I completed my Bachelor's Degree in Computer Programming and Information Systems
+				with Concentration in Web Development in Fall 2015. Since graduating, I have worked for companies such as Vanguard and Deloitte as a Software Engineer. </p>
+			</div>
+			<hr>
+			<div id= "Message">
+				<h2>Message:</h2>			
+			
+				<form class="form-style-4" action="" method="post">
+				<label for="field1">
+				<span>Enter Your Name</span><input type="text" name="field1" required="true" />
+				</label>
+				<label for="field2">
+				<span>Email Address</span><input type="email" name="field2" required="true" />
+				</label>
+				<label for="field3">
+				<span>Short Subject</span><input type="text" name="field3" required="true" />
+				</label>
+				<label for="field4">
+				<span>Message to Us</span><textarea name="field4" onkeyup="adjust_textarea(this)" required="true"></textarea>
+				</label>
+				<label>
+				<span> </span><input type="submit" value="Send Letter" />
+				</label>
+				</form>
+			
+			</div>
+			
+
+			
+			<br>
+			<hr>
+							
+			<div id = "Contact">
+			
+				<h2>Comments, Bug reports, and Feedback</h2>
+				
+				<ul>					
+					<li>Please feel free to email: Atirmizi@lewisu.edu.</li>
+					<li><a href="https://www.codeonetricks.com/">Blog: CodeOneTricks.com</a></li>
+				</ul>
+			</div>
+		
+			
+			<div id = "footer">
+				Copyright &copy; 2018-2019 ParserPro by Atif Tirmizi	
+			</div>
+			
+			
+		</div>
+	
+	</body>
+
+
+</html>

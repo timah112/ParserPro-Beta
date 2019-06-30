@@ -1,0 +1,49 @@
+textarea {
+``border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  width: 49.5%;
+}
+
+#info{
+	
+	text-align: center;
+	font-size: 17px;
+	text-align:center;
+	background-color:#ECF0F1;
+	padding: 0.1px;
+	color: #17202A;
+	
+}
+
+.highlight {
+  background-color: yellow;
+}
+.highlightRed {
+  background-color: pink;
+}
+
+#buttons{
+	 text-align:center;
+}
+
+#clear {
+float: right;	
+	
+}
+
+button {
+  background-color: #273746;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 8px;
+  position:relative;
+  cursor: pointer;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+	<head>
+		<title>ParserPro</title>
+		<link rel = "stylesheet" type ="text/css" href="css\css_template.css" />
+		<link rel = "stylesheet" type ="text/css" href="css\DiffCompare.css" />	
+		<link rel='icon' href='Favicon_Icon.ico' type='image/x-icon'/ >
+	
+	<script>
+	
+		//Create a function that returns only the same text that is NOT inside the other text area.
+		//This is done by comparing the text values in each text area with each other
+		function select() {
+			var x = document.getElementById("compareArea1").select();
+			var x = document.getElementById("compareArea1").value;
+			var y = document.getElementById("compareArea2").select();
+			
+			
+		}
+		
+		
+		function compare() {
+			
+			var area1 = document.getElementById("compareArea1");
+			var area2 = document.getElementById("compareArea2");
+			
+			var area1Text = document.getElementById("compareArea1").value; //abcde
+			var area2Text = document.getElementById("compareArea2").value; //abcdf
+		
+			
+			
+			//loop through each string and compare if s1 and s2 do not have any dissimilar characters:
+			var i = 0;
+			var z = 0;
+			
+			var items = [];
+			var items2 = [];
+			
+			while(i < area1Text.length) {
+				while(z < area2Text.length) {
+					if (area1Text.charAt(i) === area2Text.charAt(z)) {
+						items.push(area1Text.charAt(i));
+						var joinedItems = items.join("").toString();
+						
+						document.getElementById("demo").innerHTML =  "<span class='highlight'>" + joinedItems +  "</span>" ;
+					}
+					else {
+						items2.push(area2Text.charAt(i));
+						var joinedItems2 = items2.join("").toString();
+						
+						document.getElementById("demo2").innerHTML =  "<span class='highlightRed'>" + joinedItems2 +  "</span>" ;
+					
+					}
+					i++;
+					z++;
+				}
+				
+							
+			}
+			
+		return items.toString();
+			
+		}
+		
+		//TODO: fuction to Highlight only the changes in text for both areas
+				
+		
+		//Function to scroll 2 Text Areas simultaneously
+		function SyncScroll(div) {
+			var div1 = document.getElementById("compareArea1");
+			div1.scrollTop = div.scrollTop;
+			
+			var div2 = document.getElementById("compareArea2");
+			div2.scrollTop = div.scrollTop;
+			
+			var div1 = document.getElementById("outputTextArea1");
+			div1.scrollTop = div.scrollTop;
+			
+			var div2 = document.getElementById("outputTextArea2");
+			div2.scrollTop = div.scrollTop;
+		}
+	
+	</script>
+	
+	</head>
+	
+		<div id="container">
+	<body>
+			
+			<div id = "nav">
+				<ul>
+					<li>
+					   <a href="file:///C:/Users/ATirmizi1/Documents/PERSONAL/Parser%20Project/index.htm#">Home</a> 
+					  <a href="file:///C:/Users/ATirmizi1/Documents/PERSONAL/Parser%20Project/parser.htm#">Parser</a> 
+					  <a href="file:///C:/Users/ATirmizi1/Documents/PERSONAL/Parser%20Project/Converter.htm">Converter</a> 
+					  <a href="C:\Users\ATirmizi1\Documents\PERSONAL\Parser Project\DiffCompare.htm">Diff Compare</a>
+					  <a href="C:\Users\ATirmizi1\Documents\PERSONAL\Parser Project\Support.htm">Support</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div id = "info">
+					<p><b>Use the Diff Compare feature to compare between 2 files. See the differences in data between 2 files side-by-side. 
+					All the  changes will be highlighted simultaniously.</b></p>
+			</div>
+			
+			<div id = "content">
+							
+				<textarea id= "compareArea1" onscroll="SyncScroll(this)" placeholder="Paste The First/Original File Here." name="text1" rows="25" class="inputText" id="inputText1" onfocus="this.value=''; this.onfocus=null;" required ></textarea>
+				<textarea id= "compareArea2" onscroll="SyncScroll(this)" placeholder="Paste The Second File Here." name="text2" rows="25" class="inputText" id="inputText2" onfocus="this.value=''; this.onfocus=null;" required></textarea>
+				
+				<div id = "buttons">
+					<button id ="select" type="button" onClick="compare()" align="center">
+					Compare
+					</button>
+					
+					<button id ="clear" type="button" onClick="select()" align="center">
+					Clear All
+					</button>
+				
+				</div>
+				
+				<p id = "demo"></p>
+				<p id = "demo2"></p>
+					
+				<textarea id= "outputTextArea1" onscroll="SyncScroll(this)" placeholder="Output for the first file goes Here." name="text1" rows="25" class="inputText" id="inputText1" onfocus="this.value=''; this.onfocus=null;" required ></textarea>
+				<textarea id= "outputTextArea2" onscroll="SyncScroll(this)" placeholder="Output for the second file goes Here." name="text2" rows="25" class="inputText" id="inputText2" onfocus="this.value=''; this.onfocus=null;" required></textarea>					
+				
+			</div>
+			
+			<div id = "footer">
+				Copyright &copy; 2018-2019 ParserPro by Atif Tirmizi	
+			</div>
+			
+			
+		</div>
+	
+	</body>
+
+
+</html>
